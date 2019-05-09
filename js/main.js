@@ -43,7 +43,11 @@ function onDeviceReady(){
 	
 
 	
-	$("#b_guardar").click(function(e){
+	
+
+
+}
+$("#b_guardar").click(function(e){
 		if($.id != -1){
 		 	saveEditForm();
 		 }else{
@@ -62,10 +66,6 @@ function onDeviceReady(){
     }
 		 }
 	 });
-
-
-}
-
 
 /* 
 * creación de la base de datos
