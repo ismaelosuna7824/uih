@@ -39,7 +39,6 @@ function onDeviceReady(){
 		creaDB();
 	}else{
 		cargaDatos();
-		
 	}
 	
 
@@ -132,12 +131,8 @@ function cargaDatosSuccess(tx, results){
 		var persona = results.rows.item(i);
 		var selector = $("#lista_" + persona.categoria + " ul");
 		var foto = persona.foto;
-		var ft = persona.categoria;
 		if(foto == ""){
 			foto = "assets/no_foto.png";
-		}
-		if (ft == "familia"){
-			foto ="assets/pizza.jpj";
 		}
 		selector.append('<li id="li_'+persona.id+'"><a href="#detalle" data-uid='+persona.id+' class="linkDetalles"><div class="interior_lista"><img src="'+ foto +'" class="img_peq"/><span>' + persona.nombre + '</span></div></a><a href="#form"  data-theme="a" data-uid='+persona.id+'  class="linkForm">Predet.</a></li>').listview('refresh');
 	}
@@ -149,7 +144,6 @@ function cargaDatosSuccess(tx, results){
 	$(".linkForm").click(function(e){
 		$.id = $(this).data("uid");
 	});
-
 }
 
 
@@ -182,9 +176,6 @@ function queryDetalleSuccess(tx, results) {
 		var _foto = $.registro.foto;
 		if(_foto == ""){
 			_foto = "assets/no_foto.png";
-		}
-		if(registro.categoria == "familia"){
-			_foto = "assets/pizza.jpj";
 		}
 		$("#foto_img").attr("src", _foto);
 		$("#nombre").html($.registro.nombre);
@@ -276,7 +267,6 @@ function updateFormSuccess(tx) {
 	
 	$("#li_"+$.id).remove();
 	
-	
 	var cat = $("#cajaCategorias").find("input:checked").val();
 	var lista = $("#lista_" + cat + " ul")
 	lista.append(selector).listview('refresh');
@@ -334,10 +324,8 @@ function newFormSuccess(tx, results) {
 	obj.find('.linkForm').bind('click', function(e){
 		$.id = $(this).data('uid');
 	});
-	
-
-	
-	
 	lista.append(obj).listview('refresh');
+	
+	
 	$.mobile.changePage("#home");
 }
