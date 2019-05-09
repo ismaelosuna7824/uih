@@ -132,7 +132,16 @@ function cargaDatosSuccess(tx, results){
 		var selector = $("#lista_" + persona.categoria + " ul");
 		var foto = persona.foto;
 		if(foto == ""){
-			foto = "assets/no_foto.png";
+			//foto = "assets/no_foto.png";
+			if (persona.categoria == "familia"){
+				foto = "assets/pizza.jpg";
+			}
+			if (persona.categoria == "trabajo"){
+				foto = "assets/sushi.jpg";
+			}
+			if (persona.categoria == "amigo"){
+				foto = "assets/no_foto.png";
+			}
 		}
 		selector.append('<li id="li_'+persona.id+'"><a href="#detalle" data-uid='+persona.id+' class="linkDetalles"><div class="interior_lista"><img src="'+ foto +'" class="img_peq"/><span>' + persona.nombre + '</span></div></a><a href="#form"  data-theme="a" data-uid='+persona.id+'  class="linkForm">Predet.</a></li>').listview('refresh');
 	}
@@ -175,7 +184,16 @@ function queryDetalleSuccess(tx, results) {
 	$.registro = results.rows.item(0);
 		var _foto = $.registro.foto;
 		if(_foto == ""){
-			_foto = "assets/no_foto.png";
+			if (registro.categoria == "familia"){
+				_foto = "assets/pizza.jpg";
+			}
+
+			if (registro.categoria == "trabajo"){
+				_foto = "assets/sushi.jpg";
+			}
+			if (registro.categoria == "amigo"){
+				_foto = "assets/no_foto.png";
+			}
 		}
 		$("#foto_img").attr("src", _foto);
 		$("#nombre").html($.registro.nombre);
