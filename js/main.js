@@ -92,7 +92,7 @@ function creaNuevaDB(tx){
 		
 	tx.executeSql(sql);
 	
-	tx.executeSql("INSERT INTO actividades (id,nombre,domicilio,telefono,categoria,foto,email, nota) VALUES (1,'Mónica','Olivarría','+6699900970','amigo','','m.olivarria@ccumazatlan.mx', 'mi nota')");
+	
 }
 
 
