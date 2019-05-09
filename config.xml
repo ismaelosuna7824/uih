@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns = "http://www.w3.org/ns/widgets"
+    xmlns:gap = "http://phonegap.com/ns/1.0"
+    id        = "com.phonegap.actividades"
+    version   = "1.0.0">
+
+<name>Agenda con PhoneGap</name>
+
+<description>
+Ejemplo sencillo de agenda con fotos
+</description>
+
+<author href="" email="">
+Academico
+</author>
+
+
+<plugin name="cordova-plugin-dialogs" spec="~1.3.3" />
+
+
+
+</widget>
