@@ -16,6 +16,8 @@ Academico
 
 
 <plugin name="cordova-plugin-dialogs" spec="~1.3.3" />
+<plugin name="cordova-plugin-inappbrowser" spec="~3.0.0" />
+
 
 
 
