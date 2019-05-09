@@ -41,13 +41,7 @@ function onDeviceReady(){
 		cargaDatos();
 	}
 	
-
-	
-	
-
-
-}
-$("#b_guardar").click(function(e){
+	$("#b_guardar").click(function(e){
 		if($.id != -1){
 		 	saveEditForm();
 		 }else{
@@ -66,6 +60,12 @@ $("#b_guardar").click(function(e){
     }
 		 }
 	 });
+	
+	
+
+
+}
+
 
 /* 
 * creación de la base de datos
